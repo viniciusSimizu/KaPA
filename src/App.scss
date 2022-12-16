@@ -1,0 +1,21 @@
+#root {
+  width: 100vw;
+  background-color: var(--primary);
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+#root > * {
+  width: inherit;
+  padding: 0 5vw;
+  display: flex;
+}
+
+ul, li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}

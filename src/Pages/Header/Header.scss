@@ -1,0 +1,92 @@
+$HEIGHT: 10vh;
+$BORDER-WIDTH: 1px;
+$WRITE-COLOR: var(--secondary);
+
+header {
+  height: $HEIGHT;
+  max-height: $HEIGHT;
+  top: 0;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
+
+  #logo {
+    font-family: 'Zen Dots', cursive;
+    font-size: 1rem;
+  }
+
+  form {
+    width: 60vw;
+    max-width: 564px;
+    height: 35%;
+    display: flex;
+
+    & > * {
+      border-radius: 0;
+    }
+
+    input, button {
+      border: $BORDER-WIDTH solid $WRITE-COLOR;
+      background-color: transparent;
+      font-size: 10px;
+    }
+
+    input {
+      width: 80%;
+      padding: 0 4px;
+
+      &::placeholder {
+        color: $WRITE-COLOR;
+      }
+    }
+
+    button {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
+      border: $BORDER-WIDTH solid $WRITE-COLOR;
+      cursor: pointer;
+    }
+  }
+}
+
+
+@media (min-width: 465px) {
+  header {
+    #logo {
+      font-size: 1.5rem;
+    }
+
+    form {
+      height: 45%;
+
+      input, button {
+        font-size: .8rem;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 730px) {
+  header {
+    #logo {
+      font-size: 2rem;
+    }
+
+    form {
+      height: 55%;
+
+      input {
+        padding: 0 8px;
+        font-size: 1rem;
+      }
+
+      button {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
